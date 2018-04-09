@@ -1,0 +1,274 @@
+/*
+ * Copyright 2014 Pants project contributors (see CONTRIBUTORS.md).
+ * Licensed under the Apache License, Version 2.0 (see LICENSE).
+ */
+
+
+body {
+  background-color: #fff;
+  color: #111;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #006;
+  margin: 1em 0 0.3em -0.01em;
+}
+footer {
+  background-color: #f1f1f1;
+  margin-bottom: 0;
+}
+
+footer ul {
+    text-align: center;
+    padding: 0;
+}
+
+footer ul li {
+  list-style: none;
+  display: inline-flex;
+  margin: 30px;
+}
+
+.companies {
+  display: inline-flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  text-align: center;
+  padding-bottom: 5px;
+}
+.about {
+  margin: 10px;
+}
+.portfolio-title {
+  font-size: 2.5em;
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 5px;
+}
+.company-img {
+  width: 200px;
+}
+.company {
+  margin: 10px;
+  padding-bottom: 15px;
+}
+
+.codebases {
+  background-color: #f9f9f9;
+}
+
+.button {
+  display: inline-block;
+    min-width: 180px;
+    padding: 10px 20px;
+    font-size: 20px;
+    line-height: 1.4;
+    text-align: center;
+    cursor: pointer;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 3px;
+    transition: background-color .3s ease, border .3s ease;
+    transition-property: background-color, border;
+    transition-duration: 0.3s, 0.3s;
+    transition-timing-function: ease, ease;
+    transition-delay: initial, initial;
+    margin-right: 20px;
+}
+.button_install {
+  color: white!important;
+  background-color: #379deb;
+}
+.button:hover {
+  background-color: #696969;
+}
+.title {
+  font-weight: normal;
+  text-align: left;
+  padding-bottom: 5px;
+}
+.logo {
+  padding-top: 10px;
+  max-width: 100%;
+  img-align: left;
+}
+.navbar-brand {
+  color: #fff !important;
+  font-size: 25px !important;
+  font-family: 'IBM Plex Mono', monospace;
+}
+.navbar-brand-img {
+  padding-top: 9px;
+}
+
+.mainflow {
+  margin-bottom: 5em; /* So jumping to anchor link works OK close to content bottom. */
+  line-height: 24px;
+}
+
+a:link, a:visited {
+  text-decoration: none;
+  color: #027BCF;
+}
+
+a:hover {
+  background-color: #fff;
+  color: #041018;
+  text-decoration: none;
+}
+
+pre {
+  border: 1px solid #ddd;
+  padding: 5px 10px 5px 10px;
+  color: #600;
+  white-space: pre-wrap;
+}
+
+ul, ol, dl {
+  margin: 0 0 0.8em 0;
+  padding: 0;
+}
+
+ul li, ol li {
+  margin-left: 24px;
+}
+
+nav {
+  z-index: 1;
+}
+
+/* on small screens, hide navigation by default */
+@media screen and (max-width: 768px){
+  #navtoggler { display: block; }
+  nav { display: none; }
+  div.mainflow { margin-left: 2px; }
+}
+
+/* Site-wide table of contents */
+.site-toc {
+  margin-top: 30px;
+}
+.site-toc ul {
+  padding: 0.3rem 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.site-toc li.toc-link a {
+  color: #CF0202;
+}
+
+.site-toc li.toc-here, .site-toc li.toc-link:hover, .site-toc li.toc-link:hover a {
+  background-color: #F4E5E5;
+  color: black;
+}
+
+.site-toc ul li.toc-heading {
+  padding-left: 0;
+  padding-top: 1em;
+  font-size: larger;
+}
+
+.site-toc ul li.toc-h0 {
+  padding-left: 0;
+}
+
+.site-toc ul li.toc-h1 {
+  padding-left: 0.5em;
+  margin-top: 0.5em;
+}
+
+.site-toc ul li.toc-h2 {
+  padding-left: 1.5em;
+  font-size: smaller;
+}
+
+.site-toc ul li.toc-h3 {
+  padding-left: 2.5em;
+  font-size: smaller;
+  color: #eee;
+}
+
+.site-toc ul li.toc-h4 {
+  padding-left: 3.5em;
+  font-size: smaller;
+  color: #eee;
+}
+
+/* page's table of contents */
+
+.codehilite {
+  /* The pygments codehilite background color bleeds under the toc's float, and we don't
+     need it anyway, so we forcefully override it here. */
+  background-color: #fff !important;
+}
+
+nav.pagetoc {
+  float: right;
+  margin: 0 1em 0 1em;
+  width: 300px;
+}
+
+nav.pagetoc ul {
+  padding: 1.0em 0;
+  margin: 0;
+  list-style-type: none;
+  background-color: #dde;
+}
+
+nav.pagetoc ul li {
+  margin: 0.5em 1em;
+  padding-right: 2px;
+}
+
+nav.pagetoc ul li:hover, nav.pagetoc ul li:hover a:hover {
+  background-color: black;
+  color: white;
+}
+nav.pagetoc ul li:hover a {
+  color: white;
+}
+nav.pagetoc ul li.toc-h1 {
+  padding-left: 0.25em;
+}
+nav.pagetoc ul li.toc-h2 {
+  padding-left: 1.0em;
+}
+nav.pagetoc ul li.toc-h3 {
+  padding-left: 2.0em;
+}
+nav.pagetoc ul li.toc-h4 {
+  padding-left: 3.0em;
+}
+
+div.ci-status {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+div.ci-status img {
+  vertical-align: middle;
+}
+
+/* colophon at page bottom */
+.generated {
+  margin-top: 5em;
+  font-size: 70%;
+  text-align: center;
+  color: #777;
+}
+
+.generated a:hover {
+  background-color: #fff;
+}
+
+.index-report-server-page-img {
+  border: 1px solid black;
+  float: right;
+  margin: 2px;
+}
+
+.index-intro-text {
+  clear: right;
+}

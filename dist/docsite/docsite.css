@@ -3,24 +3,46 @@
  * Licensed under the Apache License, Version 2.0 (see LICENSE).
  */
 
-
 body {
   background-color: #fff;
   color: #111;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color: #006;
+  color: #0084b4;
   margin: 1em 0 0.3em -0.01em;
 }
+
+hr {
+  border-color: #0084b4;
+  height: 5px;
+}
+
+.fa {
+  /* padding: 20px; */
+  height: 50px;
+  font-size: 40px;
+  width: 60px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.f {
+  line-height: 22px;
+  line-weight: 20px;
+  display: inline;
+  text-align: left;
+  font-size: 16px;
+}
+
 footer {
-  background-color: #f1f1f1;
   margin-bottom: 0;
+  margin-top: 0;
 }
 
 footer ul {
-    text-align: center;
-    padding: 0;
+  text-align: center;
+  padding: 0;
 }
 
 footer ul li {
@@ -30,79 +52,102 @@ footer ul li {
 }
 
 .companies {
-  display: inline-flex;
-  justify-content: space-between;
-  flex-wrap: nowrap;
+  display: flex;
   text-align: center;
-  padding-bottom: 5px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  max-width: 991px;
+  margin-left: auto;
+  margin-right: auto;
 }
-.about {
-  margin: 10px;
-}
+
 .portfolio-title {
-  font-size: 2.5em;
+  font-size: 3.5em;
   text-align: center;
   padding-top: 30px;
   padding-bottom: 5px;
+  font-weight: normal;
+  color: #00ACED;
+  font-family: "Lato", sans-serif;
+  text-transform: uppercase;
 }
+
 .company-img {
-  width: 200px;
+  height: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
 .company {
   margin: 10px;
   padding-bottom: 15px;
 }
 
-.codebases {
-  background-color: #f9f9f9;
-}
-
 .button {
   display: inline-block;
-    min-width: 180px;
-    padding: 10px 20px;
-    font-size: 20px;
-    line-height: 1.4;
-    text-align: center;
-    cursor: pointer;
-    border-style: solid;
-    border-width: 2px;
-    border-radius: 3px;
-    transition: background-color .3s ease, border .3s ease;
-    transition-property: background-color, border;
-    transition-duration: 0.3s, 0.3s;
-    transition-timing-function: ease, ease;
-    transition-delay: initial, initial;
-    margin-right: 20px;
+  min-width: 180px;
+  padding: 10px 20px;
+  font-size: 20px;
+  line-height: 1.4;
+  text-align: center;
+  cursor: pointer;
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 3px;
+  transition: background-color .3s ease, border .3s ease;
+  transition-property: background-color, border;
+  transition-duration: 0.3s, 0.3s;
+  transition-timing-function: ease, ease;
+  transition-delay: initial, initial;
+  margin-right: 20px;
 }
+
 .button_install {
-  color: white!important;
+  color: white !important;
   background-color: #379deb;
 }
+
 .button:hover {
   background-color: #696969;
 }
+
 .title {
   font-weight: normal;
   text-align: left;
   padding-bottom: 5px;
+  color: #00ACED;
+  font-size: 50px;
+  margin-bottom: 5px;
+  font-family: "Lato", sans-serif;
+  text-transform: uppercase;
 }
+
+.fast {
+  font-family: "Lato", sans-serif;
+  text-transform: uppercase;
+  color: #0084b4;
+}
+
 .logo {
   padding-top: 10px;
   max-width: 100%;
   img-align: left;
 }
+
 .navbar-brand {
   color: #fff !important;
   font-size: 25px !important;
   font-family: 'IBM Plex Mono', monospace;
 }
+
 .navbar-brand-img {
   padding-top: 9px;
 }
 
 .mainflow {
-  margin-bottom: 5em; /* So jumping to anchor link works OK close to content bottom. */
+  margin-bottom: 5em;
+  /* So jumping to anchor link works OK close to content bottom. */
   line-height: 24px;
 }
 
@@ -138,16 +183,25 @@ nav {
 }
 
 /* on small screens, hide navigation by default */
-@media screen and (max-width: 768px){
-  #navtoggler { display: block; }
-  nav { display: none; }
-  div.mainflow { margin-left: 2px; }
+
+@media screen and (max-width: 768px) {
+  #navtoggler {
+    display: block;
+  }
+  nav {
+    display: none;
+  }
+  div.mainflow {
+    margin-left: 2px;
+  }
 }
 
 /* Site-wide table of contents */
+
 .site-toc {
   margin-top: 30px;
 }
+
 .site-toc ul {
   padding: 0.3rem 0;
   margin: 0;
@@ -155,7 +209,7 @@ nav {
 }
 
 .site-toc li.toc-link a {
-  color: #CF0202;
+  color: #FFF;
 }
 
 .site-toc li.toc-here, .site-toc li.toc-link:hover, .site-toc li.toc-link:hover a {
@@ -204,7 +258,7 @@ nav {
 }
 
 nav.pagetoc {
-  float: right;
+  float: left;
   margin: 0 1em 0 1em;
   width: 300px;
 }
@@ -225,18 +279,23 @@ nav.pagetoc ul li:hover, nav.pagetoc ul li:hover a:hover {
   background-color: black;
   color: white;
 }
+
 nav.pagetoc ul li:hover a {
   color: white;
 }
+
 nav.pagetoc ul li.toc-h1 {
   padding-left: 0.25em;
 }
+
 nav.pagetoc ul li.toc-h2 {
   padding-left: 1.0em;
 }
+
 nav.pagetoc ul li.toc-h3 {
   padding-left: 2.0em;
 }
+
 nav.pagetoc ul li.toc-h4 {
   padding-left: 3.0em;
 }
@@ -249,14 +308,6 @@ div.ci-status {
 
 div.ci-status img {
   vertical-align: middle;
-}
-
-/* colophon at page bottom */
-.generated {
-  margin-top: 5em;
-  font-size: 70%;
-  text-align: center;
-  color: #777;
 }
 
 .generated a:hover {
